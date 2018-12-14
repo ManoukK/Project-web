@@ -8,12 +8,13 @@
     <title>99 verhalen</title>
 </head>
 <body>
+
    <header>
       <nav>
           <ul>
              <li>
                  <a>
-                   <img src="img/fav.png" alt="favoriet">
+                   <img src="img/fkknav.png" alt="favoriet">
                  </a>
              </li>
              <li>
@@ -21,18 +22,22 @@
              </li>
             <li>
                 <a>
-                   <img src="img/profiel.png" alt="profiel">
-       </a>
+                   <svg id="profielsvg" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.28 355.48"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:#982582;stroke-miterlimit:10;stroke-width:20px;}.cls-2{fill:#982582;}</style></defs><title>profiel</title><rect class="cls-1" x="10" y="10" width="467.28" height="335.48" rx="64.93" ry="64.93"/><path class="cls-2" d="M374.18,406.84c-25.17-33-67.65-33-92.4-33s-66.82-.05-91.88,32.52c-26.83,34.85-13.69,80.26-11.87,86.2h208C387.9,486.37,400.64,441.53,374.18,406.84Z" transform="translate(-44.67 -188.52)"/><circle class="cls-2" cx="237.31" cy="102.76" r="50.84"/></svg>
+                </a>
             </li>
           </ul>
       </nav>
    </header>
 
+   <section>
+       <a>Alle verhalen</a>
+   </section>
+
    <section id="welkom">
        <header>
-           <h2>WELKOM</h2>
+           <h2>Welkom</h2>
            <a>
-
+                <img src="img/pijl%20omlaag.png" alt="pijltje omlaag">
            </a>
        </header>
        <p>
@@ -41,75 +46,61 @@
        <p id="kleinetekst">
            Vind een bijzonder schilderij
        </p>
-       <a id="verrasmeknop">VERRAS ME</a>
+       <a>Verras me</a>
 
    </section>
 
-   <section id="ontdekken">
+   <section>
        <header>
-           <h2>VERHALEN ONTDEKKEN</h2>
-           <a></a>
+           <h2>Verhalen ontdekken</h2>
+           <a>
+               <img src="img/pijl%20omlaag.png" alt="pijltje omlaag">
+           </a>
        </header>
        <form>
-          <fieldset>
-               <label>Waardering</label>
-               <br>
-               <input type="radio" name="waardering" value="hoog">
-               <label for="hoog">Hoog</label>
-               <input type="radio" name="waardering" value="laag">
-               <label for="laag">Laag</label>
-         </fieldset>
-         <fieldset>
-               <label>Vormgeving</label>
-               <br>
-               <input type="radio" name="vormgeving" value="minimaal">
-               <label for="minimaal">Minimaal</label>
+            <fieldset>
+                <legend>Waardering</legend>
+                <input type="radio" name="waardering" value="hoog" id="hoog">
+                <label for="hoog">Hoog</label>
 
-               <input type="radio" name="vormgeving" value="normaal">
-               <label for="normaal">Normaal</label>
+                <input type="radio" name="waardering" value="laag" id="laag">
+                <label for="laag">Laag</label>
+            </fieldset>
 
-               <input type="radio" name="vormgeving" value="veel">
-               <label for="veel">Veel</label>
-           </fieldset>
-           <fieldset>
-              <label>Aantal woorden</label>
-              <br>
-               <input type="radio" name="aantalwoorden" value="0250">
-               <label for="0250">0 - 250</label>
+            <fieldset>
+                <legend>Vormgeving</legend>
+                <input type="radio" name="vormgeving" value="minimaal" id="minimaal">
+                <label for="minimaal">Minimaal</label>
 
-               <input type="radio" name="aantalwoorden" value="250500">
-               <label for="250500">250 - 500</label>
+                <input type="radio" name="vormgeving" value="normaal" id="normaal">
+                <label for="normaal">Normaal</label>
 
-               <input type="radio" name="aantalwoorden" value="500meer">
-               <label for="500meer">500+</label>
-           </fieldset>
+                <input type="radio" name="vormgeving" value="veel" id="veel">
+                <label for="veel">Veel</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Aantal woorden</legend>
+                <input type="radio" name="aantalwoorden" value="0250" id="0250">
+                <label for="0250">0 - 250</label>
+
+                <input type="radio" name="aantalwoorden" value="250500" id="250500">
+                <label for="250500">250 - 500</label>
+
+                <input type="radio" name="aantalwoorden" value="500meer" id="500meer">
+                <label for="500meer">500+</label>
+            </fieldset>
 
        </form>
 
-       <article>
-           <img>
-           <ul>
-               <li></li>
-               <li></li>
-               <li></li>
-               <li></li>
-               <li></li>
-           </ul>
-           <p>140 woorden</p>
-           <p>Normale vormgeving</p>
-           <footer>
-               <p>Verhaal no. 54</p>
-               <button></button>
-               <button></button>
-           </footer>
-       </article>
-
    </section>
 
-   <section id="populair">
+   <section>
        <header>
-           <h2>POPULAIRE VERHALEN</h2>
-           <a></a>
+           <h2>Populaire verhalen</h2>
+           <a>
+               <img src="img/pijl%20omlaag.png" alt="pijltje omlaag">
+           </a>
        </header>
 
        <article>
@@ -132,16 +123,18 @@
            <p>140 woorden</p>
            <p>Normale vormgeving</p>
            <footer>
-               <p>Verhaal no. 55</p>
                <span>
                    <button id="download">
+
                    </button>
                    <button id="fav">
+
                    </button>
                </span>
            </footer>
        </article>
-       <a id="ontdekmeerknop">Ontdek meer</a>
+
+       <a>Ontdek meer</a>
    </section>
 
    <footer id="voeter">
@@ -154,11 +147,10 @@
                 <a>Verhalen<br>voor jou</a>
             </li>
             <li>
-                 <a>verras me</a>
+                 <a>Verras me</a>
             </li>
        </ul>
    </footer>
 
 </body>
 </html>
-
