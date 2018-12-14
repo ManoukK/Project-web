@@ -246,31 +246,35 @@ footer ul {
     background-image: url(fav.png);
 }
 
-#profielsvg {
+nav ul li a svg {
     width: 3em;
 }
 
-a:hover #profielsvg .cls-1 {
+a svg .cls-1 {
+    transition: 0.2s;
+}
+
+a:hover svg .cls-1 {
     background-color: #982582;
     fill: #991782;
     stroke: #701159;
     transition: 0.2s;
 }
 
-a:hover #profielsvg .cls-2{
+a:hover svg .cls-2{
     fill: #FFDF5D;
     stroke: #FFDF5D;
     transition: 0.2s;
 }
 
-a:active #profielsvg .cls-1 {
+a:active svg .cls-1 {
     background-color: #982582;
     fill: #991782;
     stroke: #701159;
-    transition: 0.2s;
+    transform: translateY(30rem);
 }
 
-a:active #profielsvg .cls-2{
+a:active svg .cls-2{
     fill: #FFDF5D;
     stroke: #FFDF5D;
     transition: 0.2s;
@@ -285,5 +289,5 @@ NOTES
 - alles svg maken
 - code op de goede plekken zetten
 - kleur code geel veranderen
-- buttons hover
+
 
