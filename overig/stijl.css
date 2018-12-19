@@ -10,8 +10,19 @@ body {
     font-size: 1em;
 }
 
+body > header{
+    background-color: white;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: solid;
+    border-bottom-color: #707070;
+}
+
 h1 {
     display: block;
+    margin-top: 0.2em;
 }
 
 nav ul {
@@ -22,6 +33,17 @@ nav ul {
     padding-bottom: 0;
     justify-content: space-between;
     --letterkleur: #2A4040;
+}
+
+body > section:first-of-type {
+    margin-top: 7em;
+}
+
+body > section:first-of-type p {
+    color: var(--letterkleur);
+    padding-top: 1em;
+    padding-bottom: 0em;
+    align-content: center;
 }
 
 section{
@@ -67,6 +89,7 @@ section > a {
     font-size: 1.1em;
     font-weight: 700;
     margin-bottom: 2em;
+    transition: 0.2s;
 }
 
 section > a:hover {
@@ -75,7 +98,6 @@ section > a:hover {
     color: #FFDF5D;
     font-size: 1.1em;
     font-weight: 700;
-    transition: 0.2s;
 }
 
 section > a:active {
@@ -84,7 +106,6 @@ section > a:active {
     color: #FFDF5D;
     font-size: 1.2em;
     font-weight: 700;
-    transition: 0.2s;
 }
 
 form {
@@ -197,7 +218,7 @@ span button {
     background-position: center;
 }
 
-footer ul {
+body > footer ul {
     list-style: none;
     padding: 1em;
     display: flex;
@@ -205,6 +226,24 @@ footer ul {
     padding-bottom: 0;
     justify-content: space-between;
     color: #991782;
+}
+
+body > footer ul li {
+    transition: 0.2s;
+}
+
+body > footer ul li:hover{
+    /font-weight: 700;
+    /font-size: 1.3rem;
+    transform: scale(1.2)
+
+}
+
+body > footer {
+    margin-top: 9em;
+    margin-bottom: 3em;
+    text-align: center;
+    --letterkleur: #2A4040;
 }
 
 /*ID's*/
@@ -224,18 +263,11 @@ footer ul {
     --letterkleur: #2A4040;
 }
 
-#voeter {
+body > footer {
     margin-top: 9em;
     margin-bottom: 3em;
     text-align: center;
     --letterkleur: #2A4040;
-}
-
-#welkom p {
-    color: var(--letterkleur);
-    padding-top: 1em;
-    padding-bottom: 0em;
-    align-content: center;
 }
 
 #download {
@@ -254,17 +286,19 @@ a svg .cls-1 {
     transition: 0.2s;
 }
 
+a svg .cls-2{
+    transition: 0.2s;
+}
+
 a:hover svg .cls-1 {
     background-color: #982582;
     fill: #991782;
     stroke: #701159;
-    transition: 0.2s;
 }
 
 a:hover svg .cls-2{
     fill: #FFDF5D;
     stroke: #FFDF5D;
-    transition: 0.2s;
 }
 
 a:active svg .cls-1 {
@@ -277,7 +311,6 @@ a:active svg .cls-1 {
 a:active svg .cls-2{
     fill: #FFDF5D;
     stroke: #FFDF5D;
-    transition: 0.2s;
 }
 
 
@@ -285,7 +318,7 @@ NOTES
 - form fixen
 - pijlknop fixen
 - fav en download button fixen
-- alles uitlijnen op de H2's'
+- alles uitlijnen op de H2s
 - alles svg maken
 - code op de goede plekken zetten
 - kleur code geel veranderen
