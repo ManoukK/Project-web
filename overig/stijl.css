@@ -51,25 +51,27 @@ section{
     flex-direction: column;
     align-items: center;
     position: relative;
-    max-width: 75vw;
+    max-width: 85vw;
     margin: 0 auto;
 }
 
 section header h2{
     background-color: #991782;
-    padding: 1.3em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.9em;
     color: white;
     font-weight: 100;
-    font-size: 1.4em;
+    font-size: 1.15em;
     margin: 0em;
-    width: 75vw;
+    width: 85vw;
     text-transform: uppercase;
 }
 
 section header a img{
-    width: 2em;
-    margin-top: -3.4em;
-    margin-left: 75vw;
+    width: 1.5em;
+    margin-top: -2em;
+    margin-left: 78vw;
     border-style: none;
     position: absolute;
 }
@@ -111,18 +113,18 @@ section > a:active {
 form {
     display: block;
     border-style: none;
-    padding-left: 1.8em;
     --letterkleur: #2A4040;
     margin-top: 2em;
-    color: #2A4040;
     align-content: center;
     margin-bottom: 2em;
 }
 
 label {
     --letterkleur: #2A4040;
-    padding-right: 2em;
-    text-align: center;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     color: #9C2788;
     border-style: solid;
     list-style: none;
@@ -218,6 +220,13 @@ span button {
     background-position: center;
 }
 
+body > footer {
+    text-align: center;
+    --letterkleur: #2A4040;
+    margin-top: 4em;
+    margin-bottom: 3em;
+}
+
 body > footer ul {
     list-style: none;
     padding: 1em;
@@ -233,21 +242,9 @@ body > footer ul li {
 }
 
 body > footer ul li:hover{
-    /font-weight: 700;
-    /font-size: 1.3rem;
     transform: scale(1.2)
 
 }
-
-body > footer {
-    margin-top: 9em;
-    margin-bottom: 3em;
-    text-align: center;
-    --letterkleur: #2A4040;
-}
-
-/*ID's*/
-
 
 #verhaalfoto {
     width: 100%;
@@ -259,13 +256,6 @@ body > footer {
 #kleinetekst {
     margin-bottom: 2em;
     margin-top: 0em;
-    text-align: center;
-    --letterkleur: #2A4040;
-}
-
-body > footer {
-    margin-top: 9em;
-    margin-bottom: 3em;
     text-align: center;
     --letterkleur: #2A4040;
 }
