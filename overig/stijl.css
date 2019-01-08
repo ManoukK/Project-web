@@ -10,10 +10,14 @@ body {
     font-size: 1em;
 }
 
+a {
+    text-decoration: none;
+}
+
 body > header{
     background-color: white;
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     z-index: 1;
     border-bottom: solid;
@@ -68,6 +72,14 @@ a:active svg .cls-1 {
 a:active svg .cls-2{
     fill: #FFDF5D;
     stroke: #FFDF5D;
+}
+
+body div {
+    margin-top: -4em;
+}
+
+body img#hoofdfoto {
+    display: none;
 }
 
 body section:first-of-type {
@@ -136,17 +148,6 @@ section > a {
     transition: 0.2s;
 }
 
-a#link {
-    border: none;
-    background: none;
-    text-transform: none;
-    text-decoration: underline;
-    font-weight: 100;
-    padding: 0;
-    margin-bottom: 1.25em;
-    margin-top: 0.5em;
-}
-
 section > a:hover {
     background-color: #991782;
     border-color: #701159;
@@ -161,6 +162,17 @@ section > a:active {
     color: #FFDF5D;
     font-size: 1.2em;
     font-weight: 700;
+}
+
+body section a#link {
+    border: none;
+    background: none;
+    text-transform: none;
+    text-decoration: underline;
+    font-weight: 100;
+    padding: 0;
+    margin-bottom: 1.25em;
+    margin-top: 0.5em;
 }
 
 form {
@@ -199,11 +211,45 @@ input:checked + label {
     color: white;
 }
 
+section:nth-of-type(2) form button {
+    text-transform: uppercase;
+    background-color: #FFDF5D;
+    border-style: solid;
+    border-color: #B5993B;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    color: #991782;
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 1em;
+    transition: 0.2s;
+}
+
+section:nth-of-type(2) form button:hover {
+    background-color: #991782;
+    border-color: #701159;
+    color: #FFDF5D;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+section:nth-of-type(2) form button:active {
+    background-color: #991782;
+    border-color: #701159;
+    color: #FFDF5D;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
 fieldset {
     border: none;
 }
 
 section span.verhalenlijst{
+    margin-top: 1.25em;
     display: grid;
     grid-gap: 1.25em;
 }
@@ -386,7 +432,7 @@ body#favpagina section form {
     padding-bottom: 1em;
 }
 
-body#favpagina section form legend vb{
+body#favpagina section form legend {
     margin-bottom: 1em;
 }
 
@@ -434,10 +480,19 @@ body#eenverhaal section header ul li:last-child {
     margin-top: 0.8em;
 }
 
+body#eenverhaal > img {
+    background-image: url(../img/verhaalmobiel.png);
+    width: 16em;
+    height: 23em;
+}
 
 
 /* media queries */
 @media (min-width: 44em){
+
+    body#hoofdpage div{
+        margin-top: -4em;
+    }
 
     body section:first-of-type p:first-of-type {
         padding-top: 0em;
@@ -461,24 +516,134 @@ body#eenverhaal section header ul li:last-child {
         margin-right: 2em;
         margin-left: 2em;
     }
+
+    body#eenverhaal > img {
+        background-image: url(../img/verhaaltablet.png);
+        width: 30em;
+        height: 30em;
+    }
+
+    body img#hoofdfoto {
+        display: none;
+    }
 }
 
 @media (min-width: 65em){
-
-    section header h2 {
-        background-color: rgba(10, 10, 10, 0.0);
-    }
 
     /*alles ongezichtbaar kan dat wel?*/
     section header a img{
         opacity: 0;
     }
 
-    section .verhalenlijst {
+    nav ul {
+        margin-right: 3em;
+        margin-left: 3em;
+    }
+
+    body#eenverhaal > img {
+        background-image: url(../img/verhaalweb.png);
+        width: 55em;
+        height: 30em;
+    }
+
+    body#hoofdpage div {
+        margin-top: 9em;
+        margin-left: 4em;
+        width: 6em;
+    }
+
+    body#hoofdpage div ul {
+        padding-left: 0;
+    }
+
+    body#hoofdpage div ul li{
+        padding-left: 0.5em;
+        list-style: none;
+        padding-top: 1em;
+    }
+
+    body#hoofdpage div ul li:first-of-type {
+        background-color: white;
+        color: #9C2788;
+        font-weight: 700;
+        padding-bottom: 1em;
+    }
+
+    body#hoofdpage div ul li:last-of-type {
+        background-color: #9C2788;
+        padding-bottom: 13em;
+        border-top-style: solid;
+        border-top-color: #701159;
+    }
+
+    body#hoofdpage div ul li:last-of-type a {
+        color: white;
+    }
+
+    body#hoofdpage section:first-of-type {
+        background-color: white;
+        width: 25vw;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: 10em;
+        margin-top: -20.8em;
+        margin-bottom: 1.25em;
+    }
+
+    body#hoofdpage section:first-of-type p {
+        width: 25vw;
+    }
+
+    body#hoofdpage section:first-of-type p:first-of-type {
+        height: 5.5em;
+    }
+
+    body#hoofdpage section:first-of-type a:first-of-type {
+        font-size: 1em;
+    }
+
+    body#hoofdpage section:first-of-type header h2 {
+        background-color: rgba(0,0,0,0);
+        color: #991782;
+        width: 25vw;
+        padding: 0;
+        padding-top: 1em;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    body#hoofdpage section:nth-of-type(2) {
+        display: none;
+    }
+
+    body img#hoofdfoto {
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        background-image: url(../img/homepageverhaalfoto.png);
+        width: 100%;
+        height: 20em;
+        margin-top: -23em;
+        background-repeat: no-repeat;
+    }
+
+    body section:nth-of-type(3) header h2 {
+        background-color: rgba(0,0,0,0);
+        color: #9C2788;
+        padding-bottom: 0;
+        margin-top: 1.25em;
+        margin-bottom: 0;
+        margin-left: -2em;
+    }
+
+    section span.verhalenlijst {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 1em;
+        grid-template-rows: 1fr;
+        grid-gap: 1.25em;
+        width: 87vw;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
     }
 
     body footer ul {
@@ -486,11 +651,86 @@ body#eenverhaal section header ul li:last-child {
         margin-right: 3em;
     }
 
-    nav ul {
-        margin-right: 3em;
-        margin-left: 3em;
+    /* css voor tweehoofdpage.html*/
+
+    body#tweehoofdpage div {
+        margin-top: 9em;
+        margin-left: 4em;
+        height: 21em;
+        width: 6em;
+        background-color: #9C2788;
+    }
+
+    body#tweehoofdpage div ul {
+        padding-left: 0;
+    }
+
+    body#tweehoofdpage div ul li{
+        padding-left: 0.5em;
+        list-style: none;
+        padding-top: 1em;
+    }
+
+    body#tweehoofdpage div ul li:first-of-type {
+        font-weight: 300;
+        padding-bottom: 1em;
+    }
+
+    body#tweehoofdpage div ul li:first-of-type a {
+        color: white;
+    }
+
+    body#tweehoofdpage div ul li:last-of-type {
+        font-weight: 700;
+        background-color: white;
+        color: #9C2788;
+        padding-bottom: 1em;
+        border-top-style: solid;
+        border-top-color: #701159;
+    }
+
+    body#tweehoofdpage section:nth-of-type(2) {
+        background-color: white;
+        width: 25vw;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: 10em;
+        margin-top: -20.8em;
+        height: 20em;
+    }
+
+    body#tweehoofdpage section:nth-of-type(2) a:first-of-type {
+        font-size: 1em;
+    }
+
+    body#tweehoofdpage section:nth-of-type(2) header h2 {
+        background-color: rgba(0,0,0,0);
+        color: #991782;
+        width: 25vw;
+        padding: 0;
+        padding-top: 1em;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    body#tweehoofdpage section:nth-of-type(2) form fieldset {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body#tweehoofdpage section:nth-of-type(2) form fieldset label {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    body#tweehoofdpage section:nth-of-type(1) {
+        display: none;
+    }
+
+    body#tweehoofdpage section:nth-of-type(2) form button {
+        margin: 0;
+        margin-top: 1.25em;
     }
 }
-
-
-
