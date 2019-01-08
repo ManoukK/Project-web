@@ -76,7 +76,7 @@ body section:first-of-type {
 
 body section:first-of-type p:first-of-type {
     color: var(--letterkleur);
-    padding-top: 0em;
+    padding-top: 0;
     padding-bottom: 1em;
     width: 80vw;
 }
@@ -98,7 +98,7 @@ section header h2{
     color: white;
     font-weight: 100;
     font-size: 1.15em;
-    margin: 0em;
+    margin: 0;
     width: 85vw;
     text-transform: uppercase;
 }
@@ -112,7 +112,7 @@ section header a img{
 }
 
 section #kleinetekst {
-    margin: 0em;
+    margin: 0;
     text-align: center;
     --letterkleur: #2A4040;
     font-weight: 700;
@@ -142,7 +142,7 @@ a#link {
     text-transform: none;
     text-decoration: underline;
     font-weight: 100;
-    padding: 0em;
+    padding: 0;
     margin-bottom: 1.25em;
     margin-top: 0.5em;
 }
@@ -264,9 +264,9 @@ article footer span {
     margin-top: -6em;
 }
 
-span button {
+span.verhalenknoppen button {
     padding: 0;
-    border-color: #FFDF5D;
+    border-color: rgba(0,0,0,0);
     width: 4em;
     height: 4em;
     margin-right: 0;
@@ -278,11 +278,11 @@ span button {
     background-position: center;
 }
 
-button#download {
+span.verhalenknoppen button:first-child {
     background-image: url("../img/download.svg");
 }
 
-button#fav {
+span.verhalenknoppen button:last-child {
     background-image: url("../img/fav.svg");
 }
 
@@ -336,10 +336,24 @@ body#favpagina{
     font-family: museo-sans, sans-serif;
     background-color: white;
     font-size: 1em;
-    background-color: aqua;
+    background-color: white;
+}
+
+body#favpagina section header {
+    align-content: center;
+    display: flex;
+    position: absolute;
+}
+
+body#favpagina section header > a {
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: -em;
+    margin-top: -2em;
 }
 
 section header span a {
+    align-content: center;
     text-align: center;
     border-style: solid;
     border-color: #991782;
@@ -372,7 +386,7 @@ body#favpagina section form {
     padding-bottom: 1em;
 }
 
-body#favpagina section form legend {
+body#favpagina section form legend vb{
     margin-bottom: 1em;
 }
 
@@ -388,14 +402,42 @@ body#favpagina section form input:checked + label {
     color: #701159;
 }
 
+/* CSS styling van eenverhaal.html */
+
+body#eenverhaal section header ul{
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    margin: 0;
+    margin-top: -2em;
+    padding-bottom: 0;
+    justify-content: space-between;
+    --letterkleur: #2A4040;
+    width: 90vw;
+}
+
+body#eenverhaal section header ul li:first-child {
+    margin-left: 1em;
+    margin-top: 0.8em;
+}
+
+body#eenverhaal section header ul a img {
+    margin: 0;
+    margin-left: -1.4em;
+    height: 1em;
+    padding: 0;
+    margin-top: 0.1em;
+
+}
+
+body#eenverhaal section header ul li:last-child {
+    margin-top: 0.8em;
+}
 
 
 
 /* media queries */
 @media (min-width: 44em){
-    body {
-        background-color: blanchedalmond;
-    }
 
     body section:first-of-type p:first-of-type {
         padding-top: 0em;
@@ -403,7 +445,7 @@ body#favpagina section form input:checked + label {
         width: 75vw;
     }
 
-    section #verhalenlijst {
+    section .verhalenlijst {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -415,13 +457,13 @@ body#favpagina section form input:checked + label {
         margin-right: 2em;
     }
 
+    nav ul {
+        margin-right: 2em;
+        margin-left: 2em;
+    }
 }
 
 @media (min-width: 65em){
-
-    body {
-        background-color: burlywood;
-    }
 
     section header h2 {
         background-color: rgba(10, 10, 10, 0.0);
@@ -432,7 +474,7 @@ body#favpagina section form input:checked + label {
         opacity: 0;
     }
 
-    section #verhalenlijst {
+    section .verhalenlijst {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -443,6 +485,12 @@ body#favpagina section form input:checked + label {
         margin-left: 3em;
         margin-right: 3em;
     }
+
+    nav ul {
+        margin-right: 3em;
+        margin-left: 3em;
+    }
 }
+
 
 
