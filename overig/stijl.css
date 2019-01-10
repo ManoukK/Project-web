@@ -115,7 +115,7 @@ section header h2{
     text-transform: uppercase;
 }
 
-section header a img{
+section img.pijlomlaag{
     width: 1.5em;
     margin-top: -2em;
     margin-left: 78vw;
@@ -307,7 +307,7 @@ article footer span {
     margin: 0em;
     display: flex;
     margin-left: 60%;
-    margin-top: -6em;
+    margin-top: -8.3em;
 }
 
 span.verhalenknoppen button {
@@ -316,7 +316,7 @@ span.verhalenknoppen button {
     width: 4em;
     height: 4em;
     margin-right: 0;
-    margin-left: 1em;
+    margin-left: 1.4em;
     background-image: url(fav.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -365,6 +365,7 @@ body > footer ul {
 }
 
 body > footer ul li {
+    width: 5em;
     transition: 0.2s;
 }
 
@@ -373,32 +374,35 @@ body > footer ul li:hover{
 
 }
 
-/* CSS styling van favorietenpagina.html */
+/* Styling op andere pagina's behalve de home page*/
 
-body#favpagina{
-     margin: 0;
-    font-weight: 300;
-    font-family: museo-sans, sans-serif;
-    background-color: white;
-    font-size: 1em;
-    background-color: white;
+body section header a img {
+    margin: 0;
+    margin-left: -1.4em;
+    height: 1em;
+    padding: 0;
+    margin-top: 0.1em;
 }
 
-body#favpagina section header {
-    align-content: center;
-    display: flex;
-    position: absolute;
-}
-
-body#favpagina section header > a {
-    font-weight: 700;
+body section header > a {
+    color: #2A4040;
     text-decoration: underline;
-    margin-left: -em;
-    margin-top: -2em;
+}
+
+body section header a:hover {
+    color: #9C2788;
+    font-weight: 700;
+}
+
+section header span {
+    display: flex;
+    margin-top: -1em;
+    margin-bottom: -1.25em;
+    margin-left: 12vw;
+    margin-right:12vw;
 }
 
 section header span a {
-    align-content: center;
     text-align: center;
     border-style: solid;
     border-color: #991782;
@@ -421,13 +425,25 @@ section #favorietstory {
     margin-left: -0.3em
 }
 
-body#favpagina section form {
+/* CSS styling van favorietenpagina.html */
+
+body#favpagina{
+     margin: 0;
+    font-weight: 300;
+    font-family: museo-sans, sans-serif;
+    background-color: white;
+    font-size: 1em;
+    background-color: white;
+}
+
+body#favpagina > section:nth-of-type(2) {
+    position: relative;
     text-align: center;
-    margin: 0em;
     margin-top: 3em;
     background-color: #991782;
     color: white;
     width: 85vw;
+    height: 5em;
     padding-bottom: 1em;
 }
 
@@ -435,11 +451,23 @@ body#favpagina section form legend {
     margin-bottom: 1em;
 }
 
-body#favpagina section form label {
+body#favpagina > section > button {
+    position: absolute;
+    justify-content: space-between;
+    font-size: 1em;
     color: #FFDF5D ;
     border-style: hidden;
     text-decoration: underline;
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0,0,0,0);
+    margin-top: 4em;
+}
+
+body#favpagina > section > button:nth-of-type(1) {
+    margin-left: -7em;
+}
+
+body#favpagina > section > button:nth-of-type(3) {
+    margin-left: 7em;
 }
 
 body#favpagina section form input:checked + label {
@@ -457,7 +485,6 @@ body#eenverhaal section header ul{
     margin-top: -2em;
     padding-bottom: 0;
     justify-content: space-between;
-    --letterkleur: #2A4040;
     width: 90vw;
 }
 
@@ -466,17 +493,15 @@ body#eenverhaal section header ul li:first-child {
     margin-top: 0.8em;
 }
 
-body#eenverhaal section header ul a img {
-    margin: 0;
-    margin-left: -1.4em;
-    height: 1em;
-    padding: 0;
-    margin-top: 0.1em;
-
-}
-
 body#eenverhaal section header ul li:last-child {
     margin-top: 0.8em;
+}
+
+body#eenverhaal section header ul li a {
+    color: #2A4040;
+    text-decoration: none;
+    text-decoration: underline;
+
 }
 
 body#eenverhaal > span img {
@@ -537,7 +562,7 @@ body#eenverhaal > span img {
 @media (min-width: 65em){
 
     /*alles ongezichtbaar kan dat wel?*/
-    section header a img{
+    section img.pijlomlaag{
         opacity: 0;
     }
 
@@ -757,3 +782,42 @@ body#eenverhaal > span img {
         margin-top: 1.25em;
     }
 }
+
+/* test html style rotation gelukt dankzij: https://codepen.io/vitoralberto/pen/OPYyYB*/
+
+/* laad animatie */
+
+.popup {
+    background-color: beige;
+}
+
+.laad {
+    background-color: firebrick;
+}
+
+body#favpagina section.normaal {
+    background-color: beige;
+}
+
+body#favpagina section.laad {
+    background-color: firebrick;
+}
+
+body#favpagina section.laad p {
+    color: transparent;
+    background-image: url(../img/laden.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2em;
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+        from {
+                transform: rotate(0deg);
+        }
+        to {
+                transform: rotate(359deg);
+        }
+}
+
