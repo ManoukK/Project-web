@@ -78,7 +78,7 @@ body div {
     margin-top: -4em;
 }
 
-body img#hoofdfoto {
+body > img {
     display: none;
 }
 
@@ -102,6 +102,12 @@ section{
     margin: 0 auto;
 }
 
+section > h2 {
+    background-color: forestgreen;
+    font-size: 0em;
+    margin-right: 30em;
+}
+
 section header h2{
     background-color: #991782;
     padding-top: 0.6em;
@@ -115,7 +121,11 @@ section header h2{
     text-transform: uppercase;
 }
 
-section img.pijlomlaag{
+section:nth-of-type(2) header h2 {
+    margin-top: 1.25em;
+}
+
+body#hoofdpage section header a img {
     width: 1.5em;
     margin-top: -2em;
     margin-left: 78vw;
@@ -123,11 +133,32 @@ section img.pijlomlaag{
     position: absolute;
 }
 
-section #kleinetekst {
+body#tweehoofdpage section header a img {
+    width: 1.5em;
+    margin-top: -2em;
+    margin-left: 78vw;
+    border-style: none;
+    position: absolute;
+}
+
+section:first-of-type p:last-of-type {
     margin: 0;
     text-align: center;
     --letterkleur: #2A4040;
     font-weight: 700;
+}
+
+section:first-of-type a:first-of-type {
+    margin-top: 0.5em;
+}
+
+section:first-of-type a:last-of-type {
+    background-color: transparent;
+    border-style: none;
+    text-transform: none;
+    font-weight: 300;
+    text-decoration: underline;
+    width: 15em;
 }
 
 section > a {
@@ -164,7 +195,7 @@ section > a:active {
     font-weight: 700;
 }
 
-section a#link {
+body section:first-of-type header ul li:last-of-type a {
     border: none;
     background: none;
     text-transform: none;
@@ -172,7 +203,7 @@ section a#link {
     font-weight: 100;
     padding: 0;
     margin-bottom: 1.25em;
-    margin-top: 0.5em;
+    margin-top: 1.5em;
 }
 
 form {
@@ -248,7 +279,7 @@ fieldset {
     border: none;
 }
 
-section span.verhalenlijst{
+section > span{
     margin-top: 1.25em;
     display: grid;
     grid-gap: 1.25em;
@@ -310,7 +341,7 @@ article footer span {
     margin-top: -8.3em;
 }
 
-span.verhalenknoppen button {
+body section footer span button {
     padding: 0;
     border-color: rgba(0,0,0,0);
     width: 4em;
@@ -324,11 +355,33 @@ span.verhalenknoppen button {
     background-position: center;
 }
 
-span.verhalenknoppen button:first-child {
+body section footer span button:first-child {
     background-image: url("../img/download.svg");
 }
 
-span.verhalenknoppen button:last-child {
+body section footer span button:last-child {
+    background-image: url("../img/fav.svg");
+}
+
+body section header ul li > span button {
+    padding: 0;
+    border-color: rgba(0,0,0,0);
+    width: 4em;
+    height: 4em;
+    margin-right: 0;
+    margin-left: 1.4em;
+    background-image: url(fav.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+}
+
+body section header ul li > span button:first-child {
+    background-image: url("../img/download.svg");
+}
+
+body section header ul li > span button:last-child {
     background-image: url("../img/fav.svg");
 }
 
@@ -339,7 +392,7 @@ h4 {
     margin-left: 1em;
 }
 
-section #verhaalfoto {
+body article > a img {
     width: 100%;
     height: 20vh;
     object-fit: cover;
@@ -348,7 +401,6 @@ section #verhaalfoto {
 
 body > footer {
     text-align: center;
-    --letterkleur: #2A4040;
     margin-top: 4em;
     margin-bottom: 3em;
 }
@@ -367,6 +419,10 @@ body > footer ul {
 body > footer ul li {
     width: 5em;
     transition: 0.2s;
+}
+
+body > footer ul li a {
+    color: #9C2788;
 }
 
 body > footer ul li:hover{
@@ -413,16 +469,16 @@ section header span a {
     font-size: 1em;
     font-weight: 100;
     color: #991782;
-    margin-bottom: 1em;
 
 }
 
-section #favorietstory {
+body section > header a:nth-of-type(2) {
     background-color: #991782;
     font-weight: 700;
     color: white;
     border-radius: 0em 0.5em 0.5em 0em;
-    margin-left: -0.3em
+    margin-left: -0.3em;
+    padding-bottom: 0;
 }
 
 /* CSS styling van favorietenpagina.html */
@@ -501,7 +557,38 @@ body#eenverhaal section header ul li a {
     color: #2A4040;
     text-decoration: none;
     text-decoration: underline;
+}
 
+body#eenverhaal section header ul li a:hover {
+    font-weight: 700;
+    color: #9C2788;
+}
+
+body#eenverhaal section header ul li a:active {
+    font-weight: 700;
+    color: #9C2788;
+}
+
+body#eenverhaal section header ul li > button {
+    color: #2A4040;
+    text-decoration: underline;
+    border-style: none;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+body#eenverhaal section header ul li > button:hover {
+    font-weight: 700;
+    color: #9C2788;
+}
+
+body#eenverhaal section header ul li > button:active {
+    font-weight: 700;
+    color: #9C2788;
+}
+
+body#eenverhaal > span {
+    z-index: -1;
 }
 
 body#eenverhaal > span img {
@@ -531,7 +618,7 @@ body#eenverhaal > span img {
         width: 75vw;
     }
 
-    section span.verhalenlijst {
+    body section > span {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -552,7 +639,7 @@ body#eenverhaal > span img {
         background-image: url(../img/verhaalmop.png);
     }
 
-    body img#hoofdfoto {
+    body > img {
         display: none;
     }
 
@@ -562,7 +649,7 @@ body#eenverhaal > span img {
 @media (min-width: 65em){
 
     /*alles ongezichtbaar kan dat wel?*/
-    section img.pijlomlaag{
+    body section header a img{
         opacity: 0;
     }
 
@@ -648,7 +735,7 @@ body#eenverhaal > span img {
         display: none;
     }
 
-    body img#hoofdfoto {
+    body > img {
         display: flex;
         position: absolute;
         z-index: -1;
@@ -669,7 +756,7 @@ body#eenverhaal > span img {
         margin-left: -2em;
     }
 
-    section span.verhalenlijst {
+    body section > span {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -795,11 +882,11 @@ body#eenverhaal > span img {
     background-color: firebrick;
 }
 
-body#favpagina section.normaal {
+body#favpagina section#choose-device {
     background-color: beige;
 }
 
-body#favpagina section.laad {
+body#favpagina section#choose-device.laad {
     background-color: firebrick;
 }
 
@@ -821,3 +908,72 @@ body#favpagina section.laad p {
         }
 }
 
+/* pop up animatie */
+
+body#eenverhaal section.popup {
+    position: relative;
+    background-color: #fafafa;
+    width: 18em;
+    height: 12em;
+    margin-top: -25em;
+    border-radius: 1em;
+    box-shadow: 4px 5px 5px lightgray;
+}
+
+body#eenverhaal section.popup p:first-of-type {
+    position: absolute;
+    text-align: center;
+    margin-top: 1em;
+}
+
+body#eenverhaal section.popup ul {
+    position: absolute;
+    display: flex;
+    margin: auto;
+    margin-top: 3.5em;
+    padding: 0;
+}
+
+body#eenverhaal section.popup ul li {
+    list-style: none;
+    margin-left: 0.4em;
+}
+
+body#eenverhaal section.popup ul li button {
+    width: 3em;
+    height: 3em;
+    background-image: url(../img/gelester.svg);
+    background-color: transparent;
+    border-style: none;
+}
+
+body#eenverhaal section.popup p:last-of-type {
+    position: absolute;
+    margin-top: 7.5em;
+    font-size: 0.8em;
+}
+
+body#eenverhaal section.popup > span {
+    margin-top: 9em;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #08141F;
+    width: 100%
+}
+
+body#eenverhaal section.popup > span  button {
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 0.5em;
+    border-style: none;
+}
+
+body#eenverhaal section.popup > span  button:hover {
+    color: #9C2788;
+}
+
+body#eenverhaal section.popup > span  button:active {
+    color: #9C2788;
+}

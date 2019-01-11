@@ -15,8 +15,10 @@ console.log('hoi');
 
 
 
-var testtest = document.querySelector('.normaal');
+var section = document.querySelector('#choose-device');
+var button = document.querySelector('#choose-device button:first-of-type');
 
-testtest.addEventListener ('click', function() {
-    testtest.classList.toggle('laad');
+
+button.addEventListener ('click', function() {
+    section.classList.toggle('laad');
 });
