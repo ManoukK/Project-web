@@ -631,6 +631,95 @@ body#eenverhaal > span img {
     margin-top: 1.25em;
 }
 
+body#eenverhaal section:nth-of-type(2) {
+    background-color: aqua;
+    position: relative;
+}
+
+body#eenverhaal button#klik {
+    position: absolute;
+    margin-top: -6em;
+    margin-left: 30vw;
+    display: inherit;
+}
+
+
+body#eenverhaal section.popup-none > span{
+    opacity: 0;
+    position: relative;
+    background-color: #fafafa;
+    width: 18em;
+    height: 12em;
+    margin-top: -25em;
+    border-radius: 1em;
+    box-shadow: 4px 5px 5px lightgray;
+}
+
+body#eenverhaal section.popup-none > button {
+    position: absolute;
+    margin-top: -42em;
+    margin-left: 30vw;
+    border-style: none;
+    background-color: transparent;
+
+}
+
+body#eenverhaal section.popup-none > span p:first-of-type {
+    text-align: center;
+    margin-top: 1em;
+}
+
+body#eenverhaal section.popup-none > span ul {
+    display: flex;
+    margin: auto;
+    margin-top: -1.5em;
+    padding: 0;
+}
+
+body#eenverhaal section.popup-none > span ul li {
+    list-style: none;
+    margin-left: 0.4em;
+}
+
+body#eenverhaal section.popup-none ul li button {
+    width: 3em;
+    height: 3em;
+    background-image: url(../img/gelester.svg);
+    background-color: transparent;
+    border-style: none;
+}
+
+body#eenverhaal section.popup-none p:last-of-type {
+    margin: auto;
+    margin-top: -1.5em;
+    font-size: 0.8em;
+}
+
+body#eenverhaal section.popup-none > span > span {
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #08141F;
+    width: 100%
+}
+
+body#eenverhaal section.popup-none > span  > span  button {
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    width: 5em;
+    margin-top: 0.5em;
+    border-style: none;
+}
+
+body#eenverhaal section.popup-none > span  > span  button:hover {
+    color: #9C2788;
+}
+
+body#eenverhaal section.popup-none > span  > span  button:active {
+    color: #9C2788;
+}
+
 /* CSS styling van 99verhalen.html */
 
 body#alle99lijst section:nth-of-type(1) {
@@ -945,9 +1034,7 @@ body#alle99lijst section form button {
     }
 }
 
-/* test html style rotation gelukt dankzij: https://codepen.io/vitoralberto/pen/OPYyYB*/
-
-/* laad animatie */
+/* laad animatie rotation gelukt dankzij: https://codepen.io/vitoralberto/pen/OPYyYB*/
 
 body#favpagina section.laad p {
     color: transparent;
@@ -967,82 +1054,18 @@ body#favpagina section.laad p {
         }
 }
 
-/* pop up animatie */
+/* pop up animatie met dank aan: https://stackoverflow.com/questions/15907079/css3-transition-fade-out-effect*/
 
-body#eenverhaal section.popup-none {
-    background-color: aqua;
+body#eenverhaal section.popup-none > span {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
 
-body#eenverhaal section.popup {
-    background-color: chartreuse;
+body#eenverhaal section.popup > span {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
 }
 
-.body#eenverhaal section.popup {
-    position: relative;
-    background-color: #fafafa;
-    width: 18em;
-    height: 12em;
-    margin-top: -25em;
-    border-radius: 1em;
-    box-shadow: 4px 5px 5px lightgray;
-}
 
-.body#eenverhaal section.popup p:first-of-type {
-    position: absolute;
-    text-align: center;
-    margin-top: 1em;
-}
 
-.body#eenverhaal section.popup ul {
-    position: absolute;
-    display: flex;
-    margin: auto;
-    margin-top: 3.5em;
-    padding: 0;
-}
 
-.body#eenverhaal section.popup ul li {
-    list-style: none;
-    margin-left: 0.4em;
-}
-
-.body#eenverhaal section.popup ul li button {
-    width: 3em;
-    height: 3em;
-    background-image: url(../img/gelester.svg);
-    background-color: transparent;
-    border-style: none;
-}
-
-.body#eenverhaal section.popup p:last-of-type {
-    position: absolute;
-    margin-top: 7.5em;
-    font-size: 0.8em;
-}
-
-.body#eenverhaal section.popup > span {
-    display: flex;
-    margin-top: 9em;
-    border-top-style: solid;
-    border-top-width: thin;
-    border-top-color: #08141F;
-    width: 100%
-}
-
-.body#eenverhaal section.popup > span  button {
-    background-color: transparent;
-    font-size: 1.1em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    width: 5em;
-    margin-top: 0.5em;
-    border-style: none;
-}
-
-.body#eenverhaal section.popup > span  button:hover {
-    color: #9C2788;
-}
-
-.body#eenverhaal section.popup > span  button:active {
-    color: #9C2788;
-}

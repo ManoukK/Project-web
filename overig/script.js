@@ -22,15 +22,3 @@ var buttonz = document.querySelector('#choose-device button:first-of-type');
 buttonz.addEventListener ('click', function() {
     sectionz.classList.toggle('laad');
 });
-
-
-
-var sectionx = document.querySelector('.popup-none');
-var buttonx = document.querySelector('.popup-none button:first-of-type');
-
-
-buttonx.addEventListener('click', function() {
-    sectionx.classList.toggle('popup');
-});
-
-
