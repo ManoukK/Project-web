@@ -237,6 +237,11 @@ form:first-of-type input {
     overflow: hidden;
 }
 
+form:first-of-type input:hover + label {
+    background-color: #FFDE73;
+    font-weight: 300;
+}
+
 form:first-of-type input:checked + label {
     background-color: #9C2788;
     color: white;
@@ -279,7 +284,7 @@ fieldset {
     border: none;
 }
 
-section > span{
+span.verhalenlijstgrid {
     margin-top: 1.25em;
     display: grid;
     grid-gap: 1.25em;
@@ -597,24 +602,6 @@ body#eenverhaal section header ul li a:active {
     color: #9C2788;
 }
 
-body#eenverhaal section header ul li > button {
-    color: #2A4040;
-    text-decoration: underline;
-    border-style: none;
-    font-size: 1em;
-    font-weight: 300;
-}
-
-body#eenverhaal section header ul li > button:hover {
-    font-weight: 700;
-    color: #9C2788;
-}
-
-body#eenverhaal section header ul li > button:active {
-    font-weight: 700;
-    color: #9C2788;
-}
-
 body#eenverhaal > span {
     z-index: -1;
 }
@@ -636,16 +623,9 @@ body#eenverhaal section:nth-of-type(2) {
     position: relative;
 }
 
-body#eenverhaal button#klik {
-    position: absolute;
-    margin-top: -6em;
-    margin-left: 30vw;
-    display: inherit;
-}
-
-
 body#eenverhaal section.popup-none > span{
     opacity: 0;
+    display: block;
     position: relative;
     background-color: #fafafa;
     width: 18em;
@@ -671,9 +651,9 @@ body#eenverhaal section.popup-none > span p:first-of-type {
 
 body#eenverhaal section.popup-none > span ul {
     display: flex;
-    margin: auto;
-    margin-top: -1.5em;
     padding: 0;
+    margin-right: 3em;
+    margin-left: 2.5em;
 }
 
 body#eenverhaal section.popup-none > span ul li {
@@ -691,15 +671,18 @@ body#eenverhaal section.popup-none ul li button {
 
 body#eenverhaal section.popup-none p:last-of-type {
     margin: auto;
-    margin-top: -1.5em;
+    margin-top: -0.5em;
     font-size: 0.8em;
+    text-align: center;
 }
 
 body#eenverhaal section.popup-none > span > span {
     border-top-style: solid;
     border-top-width: thin;
     border-top-color: #08141F;
-    width: 100%
+    width: 100%;
+    display: block;
+    margin-top: 2em;
 }
 
 body#eenverhaal section.popup-none > span  > span  button {
@@ -753,9 +736,25 @@ body#alle99lijst section form:last-of-type ul li {
     list-style: none;
 }
 
-body#alle99lijst section form:last-of-type input:checked + label {
+body#alle99lijst section form:last-of-type ul li label {
+    border-style: none;
+}
+
+body#alle99lijst section:nth-of-type(2) span:nth-of-type(2) form input {
+    visibility: visible;
+    overflow: visible;
+}
+
+body#alle99lijst section span:last-of-type input:hover + label {
     color: #991782;
     font-weight: 700;
+    background-color: transparent;
+}
+
+body#alle99lijst section span:last-of-type input:checked + label {
+    color: #991782;
+    font-weight: 700;
+    background-color: transparent;
 }
 
 body#alle99lijst section form button {
@@ -779,7 +778,7 @@ body#alle99lijst section form button {
         width: 75vw;
     }
 
-    body section > span {
+    span.verhalenlijstgrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -916,7 +915,7 @@ body#alle99lijst section form button {
         margin-left: -2em;
     }
 
-    body section > span {
+    span.verhalenlijstgrid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -931,9 +930,10 @@ body#alle99lijst section form button {
         margin-right: 3em;
     }
 
-    body#alle99lijst section header a img {
+    body section:first-of-type header a img {
         opacity: 100;
     }
+
 
     /* css voor tweehoofdpage.html*/
 
@@ -1032,9 +1032,44 @@ body#alle99lijst section form button {
         margin: 0;
         margin-top: 1.25em;
     }
+
+    body#alle99lijst section:nth-of-type(2) {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 20em;
+    }
+
+    body#alle99lijst section:nth-of-type(2) span {
+        display: block;
+    }
+
+    body#alle99lijst section:nth-of-type(2) span header h2 {
+        width: 85%;
+    }
+
+    body#alle99lijst section:nth-of-type(2) span header a img {
+        opacity: 1;
+        margin-left: 33vw;
+    }
+
+    body#alle99lijst section:nth-of-type(2) span:nth-of-type(2){
+        margin-top: -7em;
+        margin-left: 4em;
+    }
+
+    body#alle99lijst section:nth-of-type(2) span:nth-of-type(2) h2 {
+        width: 95%;
+    }
+
+    body#alle99lijst section:nth-of-type(2) span:nth-of-type(2) form input {
+        visibility: visible;
+        overflow: visible;
+    }
 }
 
 /* laad animatie rotation gelukt dankzij: https://codepen.io/vitoralberto/pen/OPYyYB*/
+
 
 body#favpagina section.laad p {
     color: transparent;
@@ -1065,7 +1100,6 @@ body#eenverhaal section.popup > span {
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
 }
-
 
 
 

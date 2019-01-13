@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/haa1fjl.css">
     <link rel="stylesheet" href="../overig/stijl.css">
+     <link rel="shortcut icon" href="../img/favicon.ico">
     <title>Alle verhalen lijst</title>
 </head>
 
@@ -36,59 +37,61 @@
     </section>
 
     <section>
-       <header>
-           <h2>Interesses</h2>
-           <a>
-               <img src="../img/pijl%20omlaag.png" alt="pijltje omlaag">
-           </a>
-       </header>
-        <form>
-            <fieldset>
-                <legend>Waardering</legend>
+        <span>
+           <header>
+               <h2>Interesses</h2>
+               <a>
+                   <img src="../img/pijl%20omlaag.png" alt="pijltje omlaag">
+               </a>
+           </header>
+            <form>
+                <fieldset>
+                    <legend>Waardering</legend>
 
-                <input type="radio" name="waardering" value="hoog" id="hoog">
-                <label for="hoog">Hoog</label>
+                    <input type="radio" name="waardering" value="hoog" id="hoog">
+                    <label for="hoog">Hoog</label>
 
-                <input type="radio" name="waardering" value="laag" id="laag">
-                <label for="laag">Laag</label>
-            </fieldset>
+                    <input type="radio" name="waardering" value="laag" id="laag">
+                    <label for="laag">Laag</label>
+                </fieldset>
 
-            <fieldset>
-                <legend>Vormgeving</legend>
+                <fieldset>
+                    <legend>Vormgeving</legend>
 
-                <input type="radio" name="vormgeving" value="minimaal" id="minimaal">
-                <label for="minimaal">Minimaal</label>
+                    <input type="radio" name="vormgeving" value="minimaal" id="minimaal">
+                    <label for="minimaal">Minimaal</label>
 
-                <input type="radio" name="vormgeving" value="normaal" id="normaal">
-                <label for="normaal">Normaal</label>
+                    <input type="radio" name="vormgeving" value="normaal" id="normaal">
+                    <label for="normaal">Normaal</label>
 
-                <input type="radio" name="vormgeving" value="veel" id="veel">
-                <label for="veel">Veel</label>
-            </fieldset>
+                    <input type="radio" name="vormgeving" value="veel" id="veel">
+                    <label for="veel">Veel</label>
+                </fieldset>
 
-            <fieldset>
-                <legend>Aantal woorden</legend>
+                <fieldset>
+                    <legend>Aantal woorden</legend>
 
-                <input type="radio" name="aantalwoorden" value="0250" id="0250">
-                <label for="0250">0 - 250</label>
+                    <input type="radio" name="aantalwoorden" value="0250" id="0250">
+                    <label for="0250">0 - 250</label>
 
-                <input type="radio" name="aantalwoorden" value="250500" id="250500">
-                <label for="250500">250 - 500</label>
+                    <input type="radio" name="aantalwoorden" value="250500" id="250500">
+                    <label for="250500">250 - 500</label>
 
-                <input type="radio" name="aantalwoorden" value="500meer" id="500meer">
-                <label for="500meer">500+</label>
-            </fieldset>
+                    <input type="radio" name="aantalwoorden" value="500meer" id="500meer">
+                    <label for="500meer">500+</label>
+                </fieldset>
 
-            <button type="submit" name="submitknop" value="submit">Toon resultaten</button>
+                <button type="submit" name="submitknop" value="submit">Toon resultaten</button>
             </form>
-
-        <header>
-            <h2>Genres</h2>
-            <a>
-               <img src="../img/pijl%20omlaag.png" alt="pijltje omlaag">
-           </a>
-        </header>
-        <form>
+        </span>
+        <span>
+            <header>
+                <h2>Genres</h2>
+                <a>
+                   <img src="../img/pijl%20omlaag.png" alt="pijltje omlaag">
+               </a>
+            </header>
+            <form>
                <ul>
                    <li>
                        <input type="checkbox" name="genre" value="humor" id="humor">
@@ -117,11 +120,12 @@
                 </ul>
                 <button type="submit" name="submitknop" value="submit">Toon resultaten</button>
             </form>
+        </span>
     </section>
 
     <section>
       <h2 class="titlenone">Lijst met de 99 verhalen</h2>
-       <span>
+       <span class="verhalenlijstgrid">
             <article>
                 <a href="eenverhaal.html">
                    <img src="../img/verhalenfotos/Verward.jpg" alt="kaft van verhaal de verwarde man">
