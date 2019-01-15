@@ -3,25 +3,27 @@
 }
 
 body {
-    margin: 0;
-    font-weight: 300;
     font-family: museo-sans, sans-serif;
-    background-color: white;
+    margin: 0;
     font-size: 1em;
+    font-weight: 300;
+    background-color: white;
 }
 
 a {
     text-decoration: none;
 }
 
+
+/* Top navigatie */
 body > header{
-    background-color: white;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
     border-bottom: solid;
     border-bottom-color: #707070;
+    background-color: white;
+    z-index: 1;
 }
 
 h1 {
@@ -30,11 +32,11 @@ h1 {
 }
 
 nav ul {
+    display: flex;
     list-style: none;
     padding: 1em;
-    display: flex;
-    margin: 0;
     padding-bottom: 0;
+    margin: 0;
     justify-content: space-between;
     --letterkleur: #2A4040;
 }
@@ -52,9 +54,9 @@ a svg .cls-2{
 }
 
 a:hover svg .cls-1 {
-    background-color: #982582;
     fill: #991782;
     stroke: #701159;
+    background-color: #982582;
 }
 
 a:hover svg .cls-2{
@@ -63,9 +65,9 @@ a:hover svg .cls-2{
 }
 
 a:active svg .cls-1 {
-    background-color: #982582;
     fill: #991782;
     stroke: #701159;
+    background-color: #982582;
     transform: translateY(30rem);
 }
 
@@ -74,6 +76,8 @@ a:active svg .cls-2{
     stroke: #FFDF5D;
 }
 
+
+/* Webversie carosel afbeelding */
 body div {
     margin-top: -4em;
 }
@@ -82,69 +86,102 @@ body > img {
     display: none;
 }
 
-body section:first-of-type {
-    margin-top: 7em;
-}
 
-body section:first-of-type p:first-of-type {
-    color: var(--letterkleur);
-    padding-top: 0;
-    padding-bottom: 1em;
-    width: 80vw;
-}
-
+/* Algemene stijling van de secties */
 section{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
-    position: relative;
     max-width: 85vw;
     margin: 0 auto;
 }
 
 h2{
-    background-color: #991782;
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
-    padding-left: 0.9em;
     color: white;
     font-weight: 100;
     font-size: 1.15em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.9em;
     margin: 0;
     width: 85vw;
+    background-color: #991782;
     text-transform: uppercase;
 }
 
 h2.titlenone {
-    background-color: forestgreen;
     font-size: 0em;
     margin-left: 3000em;
+}
+
+section header a img {
+    position: absolute;
+    width: 1.5em;
+    margin-top: -2em;
+    margin-left: 78vw;
+    border-style: none;
+}
+
+
+/* link stijling */
+section > a {
+    color: #991782;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    border-style: solid;
+    border-color: #B5993B;
+
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    margin-top: 1.25em;
+    background-color: #FFDF5D;
+    transition: 0.2s;
+}
+
+section > a:hover {
+    color: #FFDF5D;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-color: #701159;
+    background-color: #991782;
+}
+
+section > a:active {
+    color: #FFDF5D;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-color: #701159;
+    background-color: #991782;
+}
+
+
+/* Welkom sectie */
+body section:first-of-type {
+    margin-top: 7em;
+}
+
+body section:first-of-type p:first-of-type {
+    color: #2A4040;
+    padding-top: 0;
+    padding-bottom: 1em;
+    width: 80vw;
 }
 
 section:nth-of-type(2) header h2 {
     margin-top: 1.25em;
 }
 
-section header a img {
-    width: 1.5em;
-    margin-top: -2em;
-    margin-left: 78vw;
-    border-style: none;
-    position: absolute;
-}
-
-section header a img {
-    width: 1.5em;
-    margin-top: -2em;
-    margin-left: 78vw;
-    border-style: none;
-    position: absolute;
-}
-
 section:first-of-type p:last-of-type {
     margin: 0;
     text-align: center;
-    --letterkleur: #2A4040;
+    color: #2A4040;
     font-weight: 700;
 }
 
@@ -153,63 +190,20 @@ section:first-of-type a:first-of-type {
 }
 
 section:first-of-type a:last-of-type {
-    background-color: transparent;
     border-style: none;
     text-transform: none;
     font-weight: 300;
     text-decoration: underline;
     width: 15em;
+    background-color: transparent;
 }
 
-section > a {
-    text-transform: uppercase;
-    align-content: center;
-    background-color: #FFDF5D;
-    border-style: solid;
-    border-color: #B5993B;
-    text-align: center;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    color: #991782;
-    font-size: 1.1em;
-    font-weight: 700;
-    margin-top: 1.25em;
-    transition: 0.2s;
-}
 
-section > a:hover {
-    background-color: #991782;
-    border-color: #701159;
-    color: #FFDF5D;
-    font-size: 1.1em;
-    font-weight: 700;
-}
-
-section > a:active {
-    background-color: #991782;
-    border-color: #701159;
-    color: #FFDF5D;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-body section:first-of-type header ul li:last-of-type a {
-    border: none;
-    background: none;
-    text-transform: none;
-    text-decoration: underline;
-    font-weight: 100;
-    padding: 0;
-    margin-bottom: 1.25em;
-    margin-top: 1.5em;
-}
-
+/* Verhalen ontdekken sectie (formulier) */
 form:first-of-type {
     display: block;
     border-style: none;
-    --letterkleur: #2A4040;
+    color: #2A4040;
     align-content: center;
     margin-bottom: 2em;
 }
@@ -219,7 +213,6 @@ form:first-of-type legend {
 }
 
 form:first-of-type label {
-    --letterkleur: #2A4040;
     padding-right: 1em;
     padding-left: 1em;
     padding-top: 0.2em;
@@ -284,6 +277,8 @@ fieldset {
     border: none;
 }
 
+
+/* Populaire verhalen lijst (+ de grid) */
 span.verhalenlijstgrid {
     margin-top: 1.25em;
     display: grid;
@@ -296,6 +291,20 @@ article {
     position: relative;
     background-color: #FFDF5D;
     align-content: center;
+}
+
+h4 {
+    width: 11em;
+    height: 5em;
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+article p {
+    color: var(--letterkleur);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
 }
 
 article ul {
@@ -318,84 +327,6 @@ article ul li{
 article ul li img {
     margin: 0em;
     width: 1.5em;
-    align-content: center;
-}
-
-article p {
-    color: var(--letterkleur);
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: 1em;
-}
-
-article footer p {
-    font-size: 0.7em;
-    margin-left: 70%;
-    position: absolute;
-    color: #2A4040;
-    margin-top: -4.5em
-
-}
-
-article footer span {
-    padding: 0em;
-    position: absolute;
-    margin: 0em;
-    display: flex;
-    margin-left: 60%;
-    margin-top: -8.3em;
-}
-
-body section footer span button {
-    padding: 0;
-    border-color: rgba(0,0,0,0);
-    width: 4em;
-    height: 4em;
-    margin-right: 0;
-    background-image: url(fav.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-}
-
-body section footer span button:first-child {
-    background-image: url("../img/download.svg");
-    margin-left: 1em;
-}
-
-body section footer span button:last-child {
-    background-image: url("../img/fav.svg");
-    margin-left: 1.4em;
-}
-
-body section header ul li > span button {
-    padding: 0;
-    border-color: rgba(0,0,0,0);
-    width: 4em;
-    height: 4em;
-    margin-right: 0;
-    margin-left: 1.4em;
-    background-image: url(fav.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-}
-
-body section header ul li > span button:first-child {
-    background-image: url("../img/download.svg");
-}
-
-body section header ul li > span button:last-child {
-    background-image: url("../img/fav.svg");
-}
-
-h4 {
-    width: 11em;
-    height: 5em;
-    margin-top: 0.5em;
-    margin-left: 1em;
 }
 
 body article > a img {
@@ -405,6 +336,38 @@ body article > a img {
     object-position: center;
 }
 
+article footer span {
+    position: absolute;
+    display: flex;
+    margin-left: 60%;
+    margin-top: -8.3em;
+}
+
+section footer span button {
+    padding: 0;
+    border-color: transparent;
+    width: 4em;
+    height: 4em;
+    margin-right: 0;
+    background-image: url(fav.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+}
+
+section footer span button:first-child {
+    background-image: url("../img/download.svg");
+    margin-left: 1em;
+}
+
+section footer span button:last-child {
+    background-image: url("../img/fav.svg");
+    margin-left: 1.4em;
+}
+
+
+/* Footer html pagina */
 body > footer {
     text-align: center;
     margin-top: 4em;
@@ -427,23 +390,22 @@ body > footer ul li {
     transition: 0.2s;
 }
 
+body > footer ul li:hover{
+    transform: scale(1.2)
+}
+
 body > footer ul li a {
     color: #9C2788;
 }
 
-body > footer ul li:hover{
-    transform: scale(1.2)
-
-}
 
 /* Styling op andere pagina's behalve de home page*/
-
 a.pijlterug img {
     margin: 0;
     margin-left: -0.7em;
+    margin-top: 0.2em;
     height: 0.7em;
     padding: 0;
-    margin-top: 0.2em;
 }
 
 a.pijlterug {
@@ -456,17 +418,8 @@ body section header a:hover {
     font-weight: 700;
 }
 
-/* CSS styling van favorietenpagina.html */
 
-body#favpagina {
-     margin: 0;
-    font-weight: 300;
-    font-family: museo-sans, sans-serif;
-    background-color: white;
-    font-size: 1em;
-    background-color: white;
-}
-
+/* Buttom navigatie van favorietenpagina.html */
 body#favpagina section:first-of-type header {
     position: relative;
     margin-top: 1.25em;
@@ -502,7 +455,6 @@ body#favpagina section:first-of-type header span a {
     border-style: solid;
     border-color: #991782;
     background-color: transparent;
-    border-color: #991782;
     padding: 0.5em;
     border-radius: 0.5em 0em 0em 0.5em;
     font-size: 1em;
@@ -521,6 +473,8 @@ body#favpagina section:first-of-type header span a:last-of-type {
     width: 6em;
 }
 
+
+/* Micro animatie downloaden van favorietenpagina.html */
 body#favpagina section#choose-device {
     position: relative;
     text-align: center;
@@ -532,36 +486,28 @@ body#favpagina section#choose-device {
     padding-bottom: 1em;
 }
 
-body#favpagina section form legend {
-    margin-bottom: 1em;
-}
-
-body#favpagina > section > button {
+body#favpagina section#choose-device button {
     position: absolute;
     justify-content: space-between;
     font-size: 1em;
     color: #FFDF5D ;
     border-style: hidden;
     text-decoration: underline;
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
     margin-top: 4em;
 }
 
-body#favpagina > section > button:nth-of-type(1) {
+body#favpagina section#choose-device button:first-of-type {
     margin-left: -7em;
 }
 
-body#favpagina > section > button:nth-of-type(3) {
+body#favpagina section#choose-device button:last-of-type {
     margin-left: 7em;
 }
 
-body#favpagina section form input:checked + label {
-    background-color: rgba(0,0,0,0);
-    color: #701159;
-}
 
 /* CSS styling van eenverhaal.html */
-
+/* Buttom navigatie van eenverhaal.html */
 body#eenverhaal section header ul{
     list-style: none;
     padding: 1em;
@@ -602,6 +548,26 @@ body#eenverhaal section header ul li a:active {
     color: #9C2788;
 }
 
+body#eenverhaal section header ul li > span button {
+    width: 4em;
+    height: 4em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: transparent;
+    margin-left: 1.4em;
+}
+
+body#eenverhaal section header ul li > span button:first-child {
+    background-image: url(../img/profiel.svg);
+}
+
+body#eenverhaal section header ul li > span button:last-child {
+    background-image: url(../img/fav.svg);
+}
+
+
+/* Verhaal Mop van eenverhaal.html */
 body#eenverhaal > span {
     z-index: -1;
 }
@@ -618,11 +584,8 @@ body#eenverhaal > span img {
     margin-top: 1.25em;
 }
 
-body#eenverhaal section:nth-of-type(2) {
-    background-color: aqua;
-    position: relative;
-}
 
+/* Micro interactie review van eenverhaal.html */
 body#eenverhaal section.popup-none > span{
     opacity: 0;
     display: block;
@@ -685,7 +648,7 @@ body#eenverhaal section.popup-none > span > span {
     margin-top: 2em;
 }
 
-body#eenverhaal section.popup-none > span  > span  button {
+body#eenverhaal section.popup-none > span  > span button {
     background-color: transparent;
     font-size: 1.1em;
     margin-left: 1.5em;
@@ -695,16 +658,17 @@ body#eenverhaal section.popup-none > span  > span  button {
     border-style: none;
 }
 
-body#eenverhaal section.popup-none > span  > span  button:hover {
+body#eenverhaal section.popup-none > span  > span button:hover {
     color: #9C2788;
 }
 
-body#eenverhaal section.popup-none > span  > span  button:active {
+body#eenverhaal section.popup-none > span  > span button:active {
     color: #9C2788;
 }
+
 
 /* CSS styling van 99verhalen.html */
-
+/* Button navigatie van 99verhalen.html */
 body#alle99lijst section:nth-of-type(1) {
     margin-right: 75vw;
 }
@@ -713,6 +677,7 @@ body#alle99lijst section:nth-of-type(1) img {
     margin-left: -1.3em;
 }
 
+/* Formulier van 99verhalen.html */
 body#alle99lijst section:nth-of-type(2) {
     margin-top: 1em;
 }
@@ -742,7 +707,6 @@ body#alle99lijst section form:last-of-type ul li label {
 
 body#alle99lijst section:nth-of-type(2) span:nth-of-type(2) form input {
     visibility: visible;
-    overflow: visible;
 }
 
 body#alle99lijst section span:last-of-type input:hover + label {
@@ -765,17 +729,31 @@ body#alle99lijst section form button {
     margin-top: 1.25em;
 }
 
-/* media queries */
+
+/* media querie tablet formaat */
 @media (min-width: 44em){
 
+
+    /* homepage webversie */
     body#hoofdpage div{
         margin-top: -4em;
+    }
+
+    body > img {
+        display: none;
     }
 
     body section:first-of-type p:first-of-type {
         padding-top: 0em;
         padding-bottom: 1em;
         width: 75vw;
+    }
+
+
+    /* Op elke html pagina */
+    nav ul {
+        margin-right: 2em;
+        margin-left: 2em;
     }
 
     span.verhalenlijstgrid {
@@ -790,37 +768,44 @@ body#alle99lijst section form button {
         margin-right: 2em;
     }
 
-    nav ul {
-        margin-right: 2em;
-        margin-left: 2em;
-    }
-
+    /* Verhaal styling op eenverhaal.html */
     body#eenverhaal > span img {
         background-image: url(../img/verhaalmop.png);
     }
 
-    body > img {
-        display: none;
-    }
-
 }
 
+/* media querie web formaat */
 @media (min-width: 65em){
 
-    /*alles ongezichtbaar kan dat wel?*/
-    body section header a img{
-        opacity: 0;
-    }
 
+    /* Op elke html pagina */
     nav ul {
         margin-right: 3em;
         margin-left: 3em;
     }
 
-    body#eenverhaal > span img {
-        background-image: url(../img/verhaalmop.png);
+    body section header a img{
+        opacity: 0;
     }
 
+    span.verhalenlijstgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1.25em;
+        width: 87vw;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+    }
+
+    body footer ul {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+
+    /* homepage webversie 1 */
     body#hoofdpage div {
         margin-top: 9em;
         margin-left: 4em;
@@ -881,7 +866,7 @@ body#alle99lijst section form button {
     }
 
     body#hoofdpage section:first-of-type header h2 {
-        background-color: rgba(0,0,0,0);
+        background-color: transparent;
         color: #991782;
         width: 25vw;
         padding: 0;
@@ -894,49 +879,7 @@ body#alle99lijst section form button {
         display: none;
     }
 
-    body > img {
-        display: flex;
-        position: absolute;
-        z-index: -1;
-        background-image: url(../img/homepageverhaalfoto.png);
-        width: 100%;
-        height: 20em;
-        margin-top: -23em;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    body section:nth-of-type(3) header h2 {
-        background-color: rgba(0,0,0,0);
-        color: #9C2788;
-        padding-bottom: 0;
-        margin-top: 1.25em;
-        margin-bottom: 0;
-        margin-left: -2em;
-    }
-
-    span.verhalenlijstgrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1.25em;
-        width: 87vw;
-        margin-top: 1.25em;
-        margin-bottom: 1.25em;
-    }
-
-    body footer ul {
-        margin-left: 3em;
-        margin-right: 3em;
-    }
-
-    body section:first-of-type header a img {
-        opacity: 100;
-    }
-
-
-    /* css voor tweehoofdpage.html*/
-
+    /* homepagina webversie 2 tweehoofdpage.html*/
     body#tweehoofdpage div {
         margin-top: 9em;
         margin-left: 4em;
@@ -1003,7 +946,7 @@ body#alle99lijst section form button {
     }
 
     body#tweehoofdpage section:nth-of-type(2) header h2 {
-        background-color: rgba(0,0,0,0);
+        background-color: transparent;
         color: #991782;
         width: 25vw;
         padding: 0;
@@ -1033,11 +976,46 @@ body#alle99lijst section form button {
         margin-top: 1.25em;
     }
 
+
+    /* Beide webversies */
+    body > img {
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        background-image: url(../img/homepageverhaalfoto.png);
+        width: 100%;
+        height: 20em;
+        margin-top: -23em;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    body section:nth-of-type(3) header h2 {
+        background-color: transparent;
+        color: #9C2788;
+        padding-bottom: 0;
+        margin-top: 1.25em;
+        margin-bottom: 0;
+        margin-left: -2em;
+    }
+
+    body section:first-of-type header a img {
+        opacity: 100;
+    }
+
+
+    /* Verhaal styling op eenverhaal.html */
+    body#eenverhaal > span img {
+        background-image: url(../img/verhaalmop.png);
+    }
+
+
+    /* formulier 99verhalenlijst.html*/
     body#alle99lijst section:nth-of-type(2) {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 20em;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 20em;
     }
 
     body#alle99lijst section:nth-of-type(2) span {
@@ -1064,13 +1042,11 @@ body#alle99lijst section form button {
 
     body#alle99lijst section:nth-of-type(2) span:nth-of-type(2) form input {
         visibility: visible;
-        overflow: visible;
     }
 }
 
-/* laad animatie rotation gelukt dankzij: https://codepen.io/vitoralberto/pen/OPYyYB*/
 
-
+/* laad animatie rotation gelukt dankzij: https://codepen.io/vitoralberto/pen/OPYyYB animatie op favorietenpagina.html*/
 body#favpagina section.laad p {
     color: transparent;
     background-image: url(../img/laden.svg);
@@ -1089,8 +1065,8 @@ body#favpagina section.laad p {
         }
 }
 
-/* pop up animatie met dank aan: https://stackoverflow.com/questions/15907079/css3-transition-fade-out-effect*/
 
+/* pop up animatie met dank aan: https://stackoverflow.com/questions/15907079/css3-transition-fade-out-effect animatie op eenverhaal.html*/
 body#eenverhaal section.popup-none > span {
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
