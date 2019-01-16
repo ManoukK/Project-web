@@ -601,7 +601,7 @@ body#eenverhaal section.popup-none > span{
 body#eenverhaal section.popup-none > button {
     position: absolute;
     margin-top: -42em;
-    margin-left: 30vw;
+    margin-left: 25vw;
     border-style: none;
     background-color: transparent;
 
